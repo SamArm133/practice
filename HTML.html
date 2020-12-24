@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<link rel="stylesheet" type="text/css" href="log.css">
+	</head>
+
+	<body>
+		<!--LOG IN-->
+
+		<form id="formu"  @submit="checkForm" action="https://twitter.com/login?lang=es" class="conterP">
+
+			<div id="title">
+  				{{ message }}
+			</div>
+
+			<!--validaciones-->
+			<div id=""class="oneinput inputSuccess">
+				<label>Phone, E-mail</label><br>
+				<input v-model="name" type="E-mail" placeholder="E-mail">
+			</div>
+			
+			<div class="twoinput">
+				<label>Password</label><br>
+				<input v-model="password" type="Password" placeholder="Password">
+			</div>
+			
+			<button id="bu" v-on:click="checkForm" type="submit" value="Enviar">Log In</button>
+
+			<div class="lin">
+				<a href="#">Did you forget your password?</a>
+				<a href="#">Sign Up</a>
+			</div>
+		</form>
+
+		<script src="vanilla.js"></script>
+	</body>
+</html>

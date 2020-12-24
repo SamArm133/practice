@@ -1,0 +1,99 @@
+.conterP {
+	width: 40%;
+	margin: 100px 29%;
+}
+
+#title {
+	color: purple;
+	text-align: center; 
+	margin: 50px;
+}
+
+.oneinput {
+	width: 100%;
+	height: 60px;
+	text-align: left;
+	background-color: #f2f2f2;
+	margin:20px;
+	border-bottom: 2px solid purple; 
+}
+
+.inputSuccess {
+	border-bottom: 2px solid green; 
+}
+
+.inputError {
+	border-bottom: 2px solid red; 
+}
+
+.oneinput label {
+	margin: 5px;
+	color: purple;
+	font-size: 20px;
+}
+
+.oneinput input {
+	width: 95%;
+	margin: 10px;
+	border: none;
+	background: transparent;
+	outline: none;
+	color: #000;
+	font-size: 18px;
+}
+
+.twoinput {
+	width: 100%;
+	height: 60px;
+	text-align: left;
+	background-color: #f2f2f2;
+	margin:20px;
+	border-bottom: 2px solid purple; 
+}
+
+.twoinput label {
+	margin: 5px;
+	color: purple;
+	font-size: 20px;
+}
+
+
+.twoinput input {
+	width: 95%;
+	margin: 10px;
+	border: none;
+	background: transparent;
+	outline: none;
+	color: #000;
+	font-size: 18px;
+}
+
+
+
+#bu {
+	width: 100%;
+	border: none;
+	outline: none;
+	height: 50px;
+	background-color: purple;
+	border-radius: 25px;
+	margin-left: 20px;
+	color: #fff;
+}
+
+
+.lin {
+	padding: 15px 10px;
+	text-align: center;
+}
+
+.lin a {
+	text-decoration: none;
+	color: purple;
+	display: inline-block;
+	margin: 15px;
+}
+
+.lin a:hover {
+	border-bottom: 2px solid purple;
+}
