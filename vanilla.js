@@ -584,3 +584,5 @@ function vowelsAndConsonants(s) {
 }
 
 
+// next code 
+
