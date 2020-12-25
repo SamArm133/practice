@@ -582,3 +582,25 @@ function vowelsAndConsonants(s) {
     }
     
 }
+
+/*el parametro (nums) tiene un arreglo de cinco numeros (2,3,6,6,5) y se
+    necesita que se imprima el segundo numero mayor*/
+
+function getSecondLargest(nums) {
+    // Complete the function
+    var large = nums[0];
+    var secondlarge = -1;
+    
+    for(var i = 0; i < nums.length; i ++ ) {
+        if(nums[i] > large) {
+            secondlarge = large;
+            large = nums[i] 
+        }
+        
+        if(nums[i] > secondlarge && nums[i] < large) {
+            secondlarge = nums[i];
+        }
+    }
+        return secondlarge;
+}
+
