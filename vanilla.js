@@ -604,4 +604,104 @@ function getSecondLargest(nums) {
         return secondlarge;
 }
 
-  
+  /* ejemplo de try{}.. catch(error){}
+  la funcion tiene un parametro s que tiene un string
+  declaro en el try ........
+  */
+
+  function reverseString(s) {
+    try {
+        console.log(s.split("").reverse().join(""))
+    }
+    
+    catch(e){
+        console.log(e.message);
+        
+        console.log(s)
+    }
+}
+
+/*
+    esta funcion es sobre el "throw" Error 
+  Complete the isPositive function.
+  If 'a' is positive, return "YES".
+  If 'a' is 0, throw an Error with the message "Zero Error"
+  If 'a' is negative, throw an Error with the message "Negative Error"
+ */
+function isPositive(a) {
+    if(a === 0) {
+        throw Error('Zero Error');
+    }
+    if(a < 0) {
+        throw Error('Negative Error')
+    }
+    
+    return 'YES';
+}
+
+/* Este codigo es una funcion que tiene dos parametros
+  y tenemos que formar un rectangulo 
+*/ 
+
+function Rectangle(a, b) {
+    let obj = {
+        length: a,
+        width: b,
+        perimeter: 2 * (a + b),
+        area: a*b
+    }
+        
+    return obj;   
+}
+
+/*este ejercisio trata de contar objetos en un arreglo  que es un
+parametro y hay tres formas de hacerlo*/
+
+//forma 1
+function getCount(objects) {
+    return objects.filter(
+        function(arrOb) { return arrOb.x === arrOb.y}
+    ).length 
+}
+
+//forma 2
+function getCount(objects) {
+    return objects.filter(arrOb => arrOb.x === arrOb.y).length
+}
+
+// forma 3
+function getCount(objects) {
+    var count = 0;
+    for(var co of objects) {
+        count+= (co.x == co.y)
+    }
+    return count;
+} 
+ 
+ // creando un clase poligono 
+
+class Polygon {
+    constructor(sides) {
+        this.sides = sides;
+    }
+        
+    perimeter() {
+        return this.sides.reduce(function add(a,b) {return a+b;})
+    }
+}
+
+//forma dos 
+
+class Polygon {
+        constructor(sides) {
+            this.sides = sides;
+        }
+        
+        perimeter() {
+            var sum = 0;
+            for(var i = 0;i< this.sides.length;i++) {
+                sum = sum + this.sides[i];
+            }
+            return sum;
+        }
+    }
