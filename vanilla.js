@@ -705,3 +705,166 @@ class Polygon {
             return sum;
         }
     }
+
+/* Add an area method to Rectangle's prototype.
+Create a Square class that satisfies the following:
+It is a subclass of Rectangle.
+It contains a constructor and no other methods.
+It can use the Rectangle class' area method to print the 
+area of a Square object.*/
+
+// se usa el objec.prototype
+class Rectangle {
+    constructor(w, h) {
+        this.w = w;
+        this.h = h;
+    }
+}
+
+Rectangle.prototype.area = function() {
+    return this.w * this.h;
+}
+
+class Square extends Rectangle {
+    constructor(pa) {
+        super(pa,pa)
+    }
+}
+
+// forma 2
+
+class Rectangle {
+    constructor(w, h) {
+        this.w = w;
+        this.h = h;
+    }
+}
+
+Rectangle.prototype.area = function() {
+    return this.w * this.h;
+}
+
+class Square extends Rectangle {
+    constructor(pa) {
+        super(pa)
+        this.w = pa;
+        this.h = pa;
+    }
+}
+
+// esta funcion tieneun parametro llamado expressions
+// la cual tiene dos elementos que es a,b que son los lados 
+// area y perimetro 
+
+// forma 1
+
+function sides(literals, ...expressions) {
+    const [a, p] = expressions;
+    
+    let s1 = (p + Math.sqrt(p*p -16 *a)) /4;
+    let s2 = (p - Math.sqrt(p*p -16 *a)) /4;
+    
+    return[s1, s2].sort();
+}
+
+
+//forma 2 
+
+function sides(literals, ...expressions) {
+    const a = expressions[0];
+    const p = expressions[1];
+    
+    let  anwers = [];
+    
+    let s1 = (p + Math.sqrt(p*p -16 *a)) /4;
+    let s2 = (p - Math.sqrt(p*p -16 *a)) /4;
+    
+    anwers.push(s1, s2);
+    return anwers.sort();
+}
+
+/*esta funcion tiene un parametro llamado nums
+el cual trae cinco numeros 1..5
+la misison es multiplicar los numeros impares por tres y 
+los pares por dos*/
+
+//forma 1
+
+function modifyArray(nums) {
+    let newArray = nums.map(arrow => arrow %2 == 0 ? arrow*2 : arrow*3)
+    return newArray;
+}
+
+//forma 2
+
+function modifyArray(nums) {
+    let arrow =  function(mul) {
+        if (mul %2 == 0) {
+            return mul * 2;
+        } else {
+            return mul * 3;
+        }
+    }
+   
+    let anwers = nums.map(arrow)
+  
+    return anwers;
+}
+
+//esta funcion trata de operadores del nivel bit a bit 
+
+function getMaxLessThanK(n, k) {
+    let max = 0;
+    for (var b = n; b > 0; b--) {
+        for (var a = b-1; a > 0; a-- ) {
+            
+            const anwe = a & b;
+            
+            if((anwe < k) && (anwe > max)) {
+               max = anwe;
+            }
+        }
+    }
+    return max;
+}
+
+/*esta function tiene un parametro unas fechas del muchos años
+ atras y se necesita saber que dia exacto es */
+
+function getDayName(dateString) {
+   let dayName = new Date(dateString).toString().slice(0, 3);
+    switch (dayName) {
+        case 'Sun':
+            dayName = 'Sunday';
+            break;
+        case 'Mon':
+            dayName = 'Monday';
+            break;
+        case 'Tue':
+            dayName = 'Tuesday';
+            break;
+        case 'Wed':
+            dayName = 'Wednesday';
+            break;              
+        case 'Thu':
+            dayName = 'Thursday';
+            break;          
+        case 'Fri':
+            dayName = 'Friday';
+            break;        
+        case 'Sat':
+            dayName = 'Saturday';
+            break;                    
+    }
+    return dayName;
+}
+
+/*una Regular expressions 
+y da como resutaldo cadena que inicia y finaliza con la misma letra o 
+caracter (^ inicia $ finaliza*/
+
+
+function regexVar() {
+  const re = /^([aeiou]).*(?<=\1)$/;
+    return re;
+}
