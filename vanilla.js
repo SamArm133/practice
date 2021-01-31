@@ -868,3 +868,20 @@ function regexVar() {
   const re = /^([aeiou]).*(?<=\1)$/;
     return re;
 }
+
+/*Esta function es una RegExp() hay dos maneras de 
+ resolverla */
+
+ // forma  uno
+
+ function regexVar() {
+    var re = /^(?:Mr|Mrs|Ms|Dr|Er)\.[a-z A-Z]+$/;
+    return re;
+}
+
+
+// forma Dos 
+
+function regexVar() {
+    return /^(?:Mr|Mrs|Ms|Dr|Er)\.[a-zA-Z]+$/;
+}
