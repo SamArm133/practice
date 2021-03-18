@@ -885,3 +885,10 @@ function regexVar() {
 function regexVar() {
     return /^(?:Mr|Mrs|Ms|Dr|Er)\.[a-zA-Z]+$/;
 }
+
+//example two RegExp
+
+function regexVar() {
+    let re = /\d+/g;
+    return re;
+}
