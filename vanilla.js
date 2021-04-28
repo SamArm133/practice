@@ -892,3 +892,33 @@ function regexVar() {
     let re = /\d+/g;
     return re;
 }
+
+// contador de clicks sobre un button
+
+/*<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Button</title>
+        <link rel="stylesheet" href="css/button.css" type="text/css">
+    </head>
+    <body>
+        <button id="btn">0</button>
+        <p id="areaCo"></p>
+        <script src="js/button.js" type="text/javascript"></script>
+    </body>
+</html>
+
+
+let btn = document.getElementById("btn")
+let counter = 0
+btn.innerText = counter;
+btn.addEventListener("click", () =>{
+  counter ++
+  btn.innerText = counter;
+})
+
+#btn {
+    width:96px;
+    height:48px;
+    font-size:24px;
+}*/
